@@ -5,12 +5,8 @@ import Button from '../ui/Button.jsx';
 import { useGrindNextStore } from '../../store/useGrindNextStore.js';
 
 const links = [
-  ['/', 'Dashboard'],
-  ['/tasks', 'Tasks'],
-  ['/projects', 'Projects'],
+  ['/', 'Home'],
   ['/workspace', 'Workspace'],
-  ['/skills', 'Skills'],
-  ['/collection', 'Collection'],
   ['/shop', 'Shop'],
 ];
 
@@ -22,9 +18,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <NavLink to="/" className="flex shrink-0 items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-700 font-black text-white shadow-lg shadow-sky-500/20">
-            G
-          </div>
           <div className="hidden sm:block">
             <p className="text-[15px] font-bold uppercase text-sky-300">GrindNEXT</p>
           </div>
@@ -47,21 +40,6 @@ export default function Navbar() {
             </nav>
 
             <div className="flex shrink-0 items-center gap-2">
-              <div className="hidden items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900/80 px-2.5 py-1.5 text-xs sm:flex">
-                <Flame className="h-4 w-4 text-orange-400" />
-                {profile.streak}
-              </div>
-              <div className="hidden items-center gap-1.5 rounded-full border border-slate-800 bg-slate-900/80 px-2.5 py-1.5 text-xs md:flex">
-                <Coins className="h-4 w-4 text-amber-300" />
-                {profile.coins}
-              </div>
-              <NavLink
-                to="/profile"
-                className="hidden items-center gap-1.5 rounded-full border border-slate-800 px-2.5 py-1.5 text-xs lg:flex"
-              >
-                <Trophy className="h-4 w-4 text-sky-300" />
-                Lv {profile.level}
-              </NavLink>
               <Button variant="ghost" className="hidden px-3 py-2 sm:inline-flex" onClick={logout}>
                 Logout
               </Button>
