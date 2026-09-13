@@ -5,6 +5,7 @@ const required = [
   "CLIENT_URL",
   "BETTER_AUTH_SECRET",
   "BETTER_AUTH_URL",
+  "CLIENT_URL2",
 ];
 
 for (const key of required) {
@@ -20,4 +21,5 @@ export const env = {
   CLIENT_URL: process.env.CLIENT_URL,
   BETTER_AUTH_SECRET: process.env.BETTER_AUTH_SECRET,
   BETTER_AUTH_URL: process.env.BETTER_AUTH_URL,
+  CLIENT_URL2: process.env.CLIENT_URL2,
 };
